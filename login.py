@@ -31,7 +31,7 @@ while True:
 			with open("login_credentials.json", 'w+') as login:
 				pwd = sha1(input("Add a new password!\n").encode()).hexdigest() 
 				credentials.append({"username":usr,"password":pwd})
-				json.dump(credentials, login)
+				json.dump(credentials, login, indent=2)
 				login.close()
 				pwd =""
 				print("We'll be sure to remember you for next time!")
